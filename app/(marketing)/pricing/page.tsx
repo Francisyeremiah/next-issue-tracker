@@ -14,7 +14,10 @@ export default function PricingPage(){
                 </p>
             </div>
 
-            <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="
+                max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 
+                gap-8 mb-16"
+            >
                 {/* Free plan */}
                 <PricingCard
                     title="Free"
@@ -48,7 +51,7 @@ export default function PricingPage(){
                         {name: 'Custom fields', included: true},
                         {name: 'Advanced intergrations', included: false},
                     ]}
-                    buttonText='Coming soon'
+                    buttonText='Coming Soon'
                     buttonLink='#'
                     highlighted
                     badge="Popular"
@@ -80,7 +83,13 @@ export default function PricingPage(){
                 </p>
                 <a 
                     href="mailto:sales@microskills.ac.tz"
-                    className="inline-flex h-10 items-center justify-center rounded-md bg-blue-600 px-8 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-blue-700 focus-visible:outile-none focus-visible:ring-1 focus-visible:ring-blue-700"
+                    className="
+                        inline-flex h-10 items-center justify-center 
+                        rounded-md bg-blue-600 px-8 py-2 text-sm font-medium
+                        text-white shadow transition-colors hover:bg-blue-700 
+                        focus-visible:outile-none focus-visible:ring-1 
+                        focus-visible:ring-blue-700
+                    "
                 >
                     Contact Sales.
                 </a>
@@ -171,11 +180,16 @@ function PricingCard({
             </ul>
             <Link 
                 href={buttonLink}
-                className={`w-full inline-flex h-10 items-center justify-center rounded-md px-8 py-2 text-sm font-medium shadow transition-colors ${
-                    highlighted
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-gray-800 border border-gray-700 hover:bg-gray-700 text-white'
-                    }`}
+                className={`
+                    w-full inline-flex h-10 items-center justify-center 
+                    rounded-md px-8 py-2 text-sm font-medium shadow 
+                    transition-colors 
+                    ${
+                        highlighted
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-gray-800 border border-gray-700 hover:bg-gray-700 text-white'
+                    }
+                `}
             >
                 {buttonText}
             </Link>        
