@@ -12,3 +12,20 @@ export interface PlanCardProps{
     buttonLink: string
     highlighted?: boolean
 }
+
+export interface PricingFeature{
+    name: string
+    included: boolean
+}
+
+export interface PricingCardProps{
+    title: string
+    price: string
+    period?: string
+    description: string
+    features: PricingFeature[]
+    buttonText: string
+    buttonLink: string
+    highlighted?: boolean
+    badge?: string
+}

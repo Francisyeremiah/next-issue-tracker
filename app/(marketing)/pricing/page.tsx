@@ -1,6 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 import { CheckCircle2, XCircle } from 'lucide-react'; //icons
+import { PricingCardProps } from '@/types';
 
 export default function PricingPage(){
     return (
@@ -98,23 +98,6 @@ export default function PricingPage(){
     );
 }
 
-interface PricingFeature{
-    name: string
-    included: boolean
-}
-
-interface PricingCardProps{
-    title: string
-    price: string
-    period?: string
-    description: string
-    features: PricingFeature[]
-    buttonText: string
-    buttonLink: string
-    highlighted?: boolean
-    badge?: string
-}
-
 function PricingCard({
     title,
     price,
@@ -160,10 +143,14 @@ function PricingCard({
                 {features.map((feature, index) => (
                     <li key={index} className="flex items-start">
                         {feature.included ? (
-                            <CheckCircle2 className="h-5 w-5 text-green-300 mr-2 flex-shrink-0" />
+                            <CheckCircle2 
+                                className="h-5 w-5 text-green-300 mr-2 shrink-0" 
+                            />
 
                         ): (
-                            <XCircle className="h-5 w-5 text-gray-500 mr-2 flex-shrink-0" />
+                            <XCircle 
+                                className="h-5 w-5 text-gray-500 mr-2 shrink-0" 
+                            />
                         )}
                         <span
                             className={
