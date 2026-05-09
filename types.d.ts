@@ -29,3 +29,8 @@ export interface PricingCardProps{
     highlighted?: boolean
     badge?: string
 }
+
+export interface FAQItemProps{
+    question: string
+    answer: string
+}
