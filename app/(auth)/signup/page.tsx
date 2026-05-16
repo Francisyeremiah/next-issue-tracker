@@ -149,8 +149,8 @@ export default function SignUpPage(){
                         </p>
                     )}
                 </FormGroup>
-                <div>
-                    <Button type="submit" className="w-full">Sign Up</Button>
+                <div className="flex flex-col items-center justify-center">
+                    <Button type="submit" className="">Sign Up</Button>
                 </div>
                 </Form>
                 </div>
